@@ -1,0 +1,40 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  font-family: "Poppins" , sans-serif;
+}
+.title {
+  text-align: left;
+  padding-left:5px;
+  color:red;
+  margin :10px 10px ;
+  border: 3px solid black;
+  border-radius:50px;
+  background-image: linear-gradient(to right ,black,red);
+}
+.parag {
+  border:3px solid black;
+  border-radius:40px;
+  padding-left:25px;
+  padding-top:8px;
+  padding-bottom:8px;
+  margin:10px 10px;
+}
+  .parag {
+    /* Set the desired dimensions for the container */ 
+    /* Add any other desired styles for the container, like background color or border */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    /* Ensure the container can contain its child elements */
+    overflow: hidden;
+  }
+
+  .parag img {
+    /* Make sure the image doesn't exceed the container's width */
+    max-width: 100%;
+    /* Make sure the image doesn't exceed the container's height */
+    max-height: 100%;
+    /* Center the image horizontally within the container */
+    display: block;
+    margin: 0 auto;
+  }
