@@ -5,16 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <title>Palmili</title>
 </head>
 <body>
-  <h1>Hello</h1>
+  <h1 class="title" >Palmili</h1>
   <div class="parag" >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae elit ut neque blandit euismod. In ante nisi, scelerisque id lacus vitae, varius tristique nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In consequat molestie rutrum. Nam ut nisi lacus. Nulla dapibus quis lectus nec mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam nulla nisl, vehicula sed nibh in, molestie tempus elit. Cras dignissim aliquet neque et suscipit. Vivamus sollicitudin, ex vel bibendum vulputate, quam justo gravida ligula, non sollicitudin dui turpis sollicitudin augue. Sed sit amet dapibus leo, tincidunt dignissim neque. Sed tellus lacus, scelerisque et lectus eget, aliquet suscipit ipsum. Curabitur a purus gravida, facilisis nisi ac, sagittis odio. Nam viverra lacinia urna in ultrices.
-
-
-    </p>
+    <div>
+        {% for job in jobs %}
+          {% include 'jobs.html'   %}
+        {% endfor %}
+    </div>
   </div>
 </body>
 </html>
