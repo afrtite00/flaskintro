@@ -1,14 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask</title>
-</head>
+    <title> Responsive Sidebar Menu  | CodingLab </title>
+    <link rel="stylesheet" href="static/style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
 <body>
-    
-    <h1>Hello there traveler, this is my first flask app</h1>
-    <img src="http://www.htmldog.com/badge1.gif" width="120" height="90" alt="HTML Dog">
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">Palmili</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Fly...">
+         <span class="tooltip">Search</span>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="text">Home</div>
+    <div class="grid-container">
+  <div onclick="boxClicked()" class="grid-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non vehicula tellus, at sollicitudin tellus. In hac habitasse platea dictumst. Nam ultricies viverra tortor nec venenatis. Proin ultrices pellentesque nunc hendrerit faucibus. Vivamus hendrerit diam erat, et blandit velit fermentum sit amet. Fusce non elit a sapien mollis aliquam. Ut pretium consectetur ligula, quis mollis dui congue ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ullamcorper, libero in porttitor consectetur, ex neque semper justo, sit amet ullamcorper velit nisi id eros. Nullam tempor eleifend aliquet. Suspendisse at augue nunc. Nam finibus semper libero eget molestie.</div>
+  <div onclick="boxClicked()" class="grid-item">2</div>
+  <div onclick="boxClicked()" class="grid-item">3</div>
+  <div onclick="boxClicked()" class="grid-item">4</div>
+  <div onclick="boxClicked()" class="grid-item">5</div>
+  <div onclick="boxClicked()" class="grid-item">6</div>
+  <div onclick="boxClicked()" class="grid-item">7</div>
+  <div onclick="boxClicked()" class="grid-item">8</div>
+  <div onclick="boxClicked()" class="grid-item">9</div>
+</div>
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
 
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+      <script>
+        function boxClicked() {
+            // Your code to handle the click event goes here
+            alert("Box clicked!");
+        }
+    </script>
 </body>
 </html>
