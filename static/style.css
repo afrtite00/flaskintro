@@ -19,6 +19,8 @@
     border: 1px solid #ccc;
     /* Ensure the container can contain its child elements */
     overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .parag img {
